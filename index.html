@@ -1,43 +1,30 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi web</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #333;
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portafolio · Tomas Ortiz</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['variant', [
+        '@media (prefers-color-scheme: dark) { &:not(:is([data-theme="light"] *)) }',
+        '&:is([data-theme="dark"] *)'
+      ]]
     }
-    h1 { color: #6c3fc5; }
-    ul { padding-left: 20px; }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <h1>Hola, soy Tomás</h1>
-  <p>Coder en Riwi</p>
 
-  <h2>Sobre mí</h2>
-  <p>Estoy aprendiendo desarrollo web y me encanta crear cosas nuevas con código.</p>
+<body class="bg-white text-slate-700 antialiased dark:bg-slate-950 dark:text-slate-300 pt-[env(safe-area-inset-top,0px)] pb-[env(safe-area-inset-bottom,0px)]">
 
-  <h2>Mis habilidades</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript (en progreso)</li>
-  </ul>
+  <header class="sticky top-[env(safe-area-inset-top,0px)] z-50 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <a href="#inicio" class="text-lg font-bold text-slate-900 dark:text-white">&lt;Tomas Ortiz/&gt;</a>
 
-  <footer>© 2026 Tomás - Hecho con ❤️ en Riwi</footer>
-</body>
-</html>
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="#sobre-mi" class="transition hover:text-indigo-600 dark:hover:text-indigo-400">Sobre mí</a></li>
+        <li><a href="#habilidades" class="transition hover:text-indigo-600 dark:hover:text-indigo-400">Habilidades</a></li>
+        <li><a href="#proyectos" class="transition hover:text-indigo-600 dark:hover:text-indigo-400">Proyectos</a></li>
+        <li><a href="#contacto" class="rounded-full bg-indigo-600 px-4 py-2 text-white transition hover:bg-indigo-500">Contacto</a></li>
+      </ul>
+
